@@ -24,7 +24,7 @@ if "%target_name%" == "" (
 
     rem for loop to create txt file that store data of command ping
     for %%a in (32, 64, 2048, 4096, 32768, 65000) do (
-        ping !target_name! -n 3 -l %%a > ping_check_data/ping_!target_name!_%%a.txt
+        ping !target_name! -w 1500 -n 10 -l %%a > ping_check_data/ping_!target_name!_%%a.txt
         echo    ping_!target_name!_%%a.txt
     )
 ) else ( 
@@ -32,7 +32,7 @@ if "%target_name%" == "" (
     echo.
     echo The ping result files are
     for %%a in (32, 64, 2048, 4096, 32768, 65000) do (
-        ping !target_name! -n 3 -l %%a > ping_check_data/ping_!target_name!_%%a.txt
+        ping !target_name! -w 1500 -n 10 -l %%a > ping_check_data/ping_!target_name!_%%a.txt
         echo    ping_!target_name!_%%a.txt
     )  
 )
