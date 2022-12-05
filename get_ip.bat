@@ -1,4 +1,4 @@
-@echo on
+@echo off
 
 set ip_address_string="IPv4 Address"
 
